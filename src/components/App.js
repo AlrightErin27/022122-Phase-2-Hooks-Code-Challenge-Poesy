@@ -30,7 +30,7 @@ function App() {
     };
     setPoems([...poems, obj]);
 
-    fetch(`http://localhost:3000/poems`, {
+    fetch(`http://localhost:8004/poems`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ poem: obj }),
