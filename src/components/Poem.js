@@ -14,7 +14,7 @@ function Poem({ poem }) {
         <strong>- {poem.author}</strong>
       </p>
       <button onClick={handleClick}>
-        {notClicked ? "MARK AS RED" : "NOT READ"}
+        {!notClicked ? "MARK AS RED" : "NOT READ"}
       </button>
     </div>
   );
