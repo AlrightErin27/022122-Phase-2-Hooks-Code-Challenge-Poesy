@@ -8,7 +8,7 @@ function App() {
   const [newPoem, setNewPoem] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/poems")
+    fetch("http://localhost:8004/poems")
       .then((res) => res.json())
       // .then((data) => console.log(data));
       .then(setPoems)
