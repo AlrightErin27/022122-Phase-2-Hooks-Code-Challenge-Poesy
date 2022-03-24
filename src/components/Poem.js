@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Poem() {
+function Poem({ poem }) {
+  const [notClicked, setNotClicked] = useState(true);
+  function handleClick() {
+    setNotClicked(!notClicked);
+  }
+
   return (
     <div>
-      <h3>Title</h3>
-      <p>Content</p>
+      <h3>{poem.title}</h3>
+      <p>{poem.content}</p>
       <p>
-        <strong>- By Author</strong>
+        <strong>- {poem.author}</strong>
       </p>
-      <button>Mark as read</button>
+      <button onClick={handleClick}>
+        {notClicked ? "MARK AS RED" : "NOT READ"}
+      </button>
     </div>
   );
 }
